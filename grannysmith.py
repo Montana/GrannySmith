@@ -6,7 +6,6 @@ def fetch_prices_whole_foods(url):
     response.raise_for_status()
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Hypothetical class names and structure for Whole Foods
     apple_elements = soup.find_all('div', class_='product-tile')
     prices = []
     for element in apple_elements:
@@ -22,7 +21,6 @@ def fetch_prices_safeway(url):
     response.raise_for_status()
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Hypothetical class names and structure for Safeway
     apple_elements = soup.find_all('div', class_='product')
     prices = []
     for element in apple_elements:
